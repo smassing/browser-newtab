@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Page</title>
+    <title>Start</title>
+
+    <link href="./css/lib.svg.css" rel="stylesheet" >
+    <link id="appTheme" href="./css/zephyr.bootstrap.min.css" rel="stylesheet" >
+    <style>
+    body {
+        --heading-ratio: 1.31;
+        /* --universal-border-radius: 1rem; */
+    }
+
+
+    .link-list {
+        margin-bottom: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    </style>
+
 </head>
 <body>
-    <h1>This is a test</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Tenth Circuit</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a id="dcn_intra" target="_blank" href="https://www.google.com" class="nav-link dcn">Google</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" href="https://www.office.com" class="nav-link inet">Office Portal</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-8">
+                            <input type="text" id="search-string" class="form-control" placeholder="Type something to search for..."/>
+                        </div>
+                        <div class="col-sm-12 col-md-2 col-lg-2">
+                            <select id="search-select" class="form-select" >
+                                <option value="bing">Bing</option>
+                                <option value="duck">Duck Duck Go</option>
+                                <option value="google">Google</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-2 col-lg-2">
+                            <input type="submit" value="Search" id="search-button" class="form-control btn btn-light"  />
+
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2 offset-md-2 offset-lg-2">
+                <p style="text-align:center;"><img class="img-fluid" src="" /></p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 ">
+                <h5>Start here...</h5>
+                <a id="pub_ca10" target="_blank" href="https://www.ca10.uscourts.gov" class="btn btn-secondary btn-sm inet link-list me-1">Tenth Circuit Public Webpage</a>
+                <a id="pub_pacer" target="_blank" href="http://pacer.psc.uscourts.gov" class="btn btn-secondary btn-sm link-list me-1">PACER</a>
+                <div id="myLinks" class=""></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+    </div>
+
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-text">
+                <span class="icon-info"></span>&nbsp;<span id="inet-connection-status"></span><span id="vpn-connection-status"></span>
+            </span>
+            <span class="navbar-text">
+                <span class="icon-help"></span>&nbsp;Helpdesk: 303-335-3034&nbsp;&nbsp;&nbsp;&nbsp;<a href="./settings.htm"><span class="icon-settings"></span></a>
+            </span>
+        </div>
+    </nav>
+
+    <script src="./js/launcher.js"></script>
+    
 </body>
 </html>

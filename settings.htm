@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth Circuit Court of Appeals : Start</title>
+
+    <link href="./css/lib.svg.css" rel="stylesheet" >
+    <link id="appTheme" href="./css/zephyr.bootstrap.min.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        --heading-ratio: 1.31;
+        /* --universal-border-radius: 1rem; */
+    }
+
+    .link-list {
+        margin-bottom: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Tenth Circuit :: Launcher Settings</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="dcn_intra" target="_blank" href="https://fedcourts.sharepoint.com/sites/CA10" class="nav-link dcn ">Intranet Home</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="./launcher.htm" class="nav-link btn btn-secondary">Save Changes</a>
+            <!-- <a href="#" class="nav-link" id="initBetaMode" >&nbsp;<span class="icon-help"></span></a> -->
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2">&nbsp;</div>
+            <div class="col-sm-12 col-md-8 col-lg-8">&nbsp;</div>
+            <div class="col-sm-12 col-md-2 col-lg-2">&nbsp;</div>
+        </div>
+        <div class="row beta hidden">
+            <div class="col-sm-12 col-md-2 col-lg-2">&nbsp;</div>
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <p><span class="icon-alert"></span><strong>Beta Mode experiments are visible.  Caution Advised!</strong></p>
+                <p>Features that are either incomplete or in testing are marked with a <span class="icon-bookmark"></span> symbol.  Use with caution.  Things are likely to break.</p>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+            <div class="col-sm-12 col-md-2 col-lg-2"><p><strong>About</strong></p></div>
+            <div class="col-sm-12 col-md-6 col-lg-6"><p><strong>Version 1.0</strong></p><p>Copyright 2022, Tenth Circuit Court of Appeals, All Rights Reserved</p><p>Launcher is a product of the Tenth Circuit Court of Appeals and for official use only.</p><p><a href="#" id="initBetaMode" ><span class="icon-help"></span></a>&nbsp;Need help?  Contact the Helpdesk: 303-335-3034</p></div>
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+            <div class="col-sm-12 col-md-2 col-lg-2"><p><strong>Custom Links</strong></p></div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <p>Add your own links to the main page right below the built-in court links.  Specify whether the link is to a internal court page or public internet page.</p>
+                <form id="addLinkForm">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <input class="form-control"  type="text" id="displayname" placeholder="Title"/>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <input class="form-control"  type="text" id="url" placeholder="URL"/>
+                        </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <select id="network-select" class="form-select"  >
+                                <option value="dcn">Court Site</option>
+                                <option value="inet">Internet Site</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-1 col-lg-1">
+                            <input class="btn btn-secondary" type="submit" id="addsite" value="+"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">URL</th>
+                                        <th scope="col">Network</th>
+                                        <th scope="col">Operations</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myLinksList">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+               </form>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2 offset-md-2 offset=lg-2"><p><strong>Fallback Internet Search Engine</strong></p></div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <p>If you have a court search engine selected such as JNET or The Guide and you are not connected to court network, this search engine will be used.</p>
+                <form>
+                    <select id="inet-search-select" class="form-select" >
+                        <option value="bing">Bing</option>
+                        <option value="duck">Duck Duck Go</option>
+                        <option value="google">Google</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2 offset-md-2 offset=lg-2"><p><strong>Launcher Mode</strong></p></div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <p>When opening a new page, display the Launcher or go directly to the Tenth Circuit Intranet page.</p>
+                <form>
+                    <select id="launcher-select" class="form-select" >
+                        <option value="launcher">Show Launcher</option>
+                        <option value="spo">Show Sharepoint Online</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12"><hr></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+            <div class="col-sm-12 col-md-2 col-lg-2"><p><strong>Theme</strong></p></div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <p>Choose your theme:</p>
+                <form>
+                    <select id="theme-select" class="form-select"  >
+                        <option value="auto">Auto</option>
+                        <option value="flatly">Flatly</option>
+                        <option value="slate">Slate</option>
+                        <option value="journal">Journal</option>
+                        <option value="pulse">Pulse</option>
+                        <option value="simplex">Simplex</option>
+                        <option value="solar">Solar</option>
+                        <option value="yeti">Yeti</option>
+                        <option value="zephyr">Zephyr</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/settings.js"></script>
+    
+</body>
+</html>
